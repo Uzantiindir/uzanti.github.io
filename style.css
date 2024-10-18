@@ -1,0 +1,162 @@
+body {
+    font-family: 'Courier New', Courier, monospace; /* Monospace font */
+    background-color: #000; /* Siyah arka plan */
+    margin: 0;
+    padding: 20px;
+    color: #fff; /* Beyaz metin rengi */
+    animation: backgroundAnimation 10s infinite alternate; /* Arka plan animasyonu */
+}
+
+h1 {
+    color: #e91e63; /* Parlak pembe */
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 3em;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    animation: fadeIn 0.5s ease-in-out; /* Başlık için fade-in animasyonu */
+}
+
+h2 {
+    margin-top: 20px;
+    color: #ff4081; /* Daha açık pembe */
+    font-size: 2em;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.5s ease-in-out; /* Başlık için fade-in animasyonu */
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1); /* Şeffaf beyaz arka plan */
+    border-radius: 15px; /* Yuvarlak köşeler */
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+.file-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px; /* Padding'i azaltarak daha yakın hale getirildi */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    transition: background-color 0.3s ease; /* Geçiş efekti */
+}
+
+.file-option:last-child {
+    border-bottom: none;
+}
+
+.file-option:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Üzerine gelindiğinde arka plan rengi değişimi */
+}
+
+.file-option:hover label {
+    color: #ff4081; /* Üzerine gelindiğinde yazı renginin değişimi */
+}
+
+label {
+    font-size: 18px;
+    color: #fff;
+    margin-right: 10px; /* Label ve input arasındaki mesafeyi artır */
+}
+
+input[type="text"] {
+    padding: 8px;
+    margin-left: 10px;
+    border: 2px solid #e91e63; /* Kenar kalınlığını artır */
+    border-radius: 4px;
+    width: 150px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Geçiş efektleri */
+    background: rgba(255, 255, 255, 0.1); /* Şeffaf arka plan */
+    color: #fff; /* Beyaz metin rengi */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Gölge efekti */
+}
+
+input[type="text"]:focus {
+    border-color: #ff4081; /* Daha açık pembe */
+    outline: none;
+    box-shadow: 0 0 5px #ff4081; /* Focus efekti */
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #e91e63; /* Parlak pembe */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Geçiş efektleri */
+}
+
+button:hover {
+    background-color: #ff4081; /* Daha açık pembe */
+    transform: scale(1.05); /* Hover efekti */
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #777;
+    padding: 10px 0; /* Padding ekle */
+    border-top: 1px solid rgba(255, 255, 255, 0.2); /* Üst kenara çizgi ekle */
+}
+
+.social-media {
+    margin-top: 10px;
+}
+
+.social-media a {
+    color: #e91e63; /* Sosyal medya ikonları için renk */
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.float-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #e91e63; /* Parlak pembe */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.float-button:hover {
+    transform: scale(1.1); /* Hover efekti */
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 90%; /* Mobilde daha geniş alan */
+    }
+    
+    h1 {
+        font-size: 2em; /* Başlık boyutunu küçült */
+    }
+
+    h2 {
+        font-size: 1.5em; /* Başlık boyutunu küçült */
+    }
+    
+    input[type="text"] {
+        width: 100%; /* Mobilde input alanını genişlet */
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes backgroundAnimation {
+    0% { background-color: #000; }
+    100% { background-color: #111; }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dosya İndirme</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+</head>
+<body>
+    <h1>Dosya İndirme Aracı</h1>
+    <form id="file-form">
+        <h2>Web Geliştirme</h2>
+        <div class="file-option"><input type="checkbox" id="html" value=".html"><label for="html">HTML</label><input type="text" placeholder="İsim" class="file-name"></div>
+        <div class="file-option"><input type="checkbox" id="htm" value=".htm"><label for="htm">HTM</label><input type="text" placeholder="İsim" class="file-name"></div>
+        <div class="file-option"><input type="checkbox" id="css" value=".css"><label for="css">CSS</label><input type="text" placeholder="İsim" class="file-name"></div>
+        <div class="file-option"><input type="checkbox" id="js" value=".js"><label for="js">JavaScript</label><input type="text" placeholder="İsim" class="file-name"></div>
+        <div class="file-option"><input type="checkbox" id="php" value=".php"><label for="php">PHP</label><input type="text" placeholder="İsim" class="file-name"></div>
+        <div class="file-option"><input type="checkbox" id="aspx" value=".aspx"><label for="aspx">ASP.NET</label><input type="text" placeholder="İsim" class="file-name"></div>
+        <div class="file-option"><input type="checkbox" id="xml" value=".xml"><label for="xml">XML</label><input type="text" placeholder="İsim" class="file-name"></div>
+        <div class="file-option"><input type="checkbox" id="json" value=".json"><label for="json">JSON</label><input type="text" placeholder="İsim" class="file-name"></div>
+
+        <h2>Genel Programlama Dilleri</h2>
+        <div class="file-option"><input type="checkbox" id="python" value=".py"><label for="python">Python</label><input type="text" placeholder="İsim" class="file-name"></div>
+        <div class="file-option"><input type="checkbox" id="java" value=".java"><label for="java">Java</label><input type="text" placeholder="İsim" class="file-name"></div>
+        <div class="file-option"><input type="checkbox" id="class" value=".class"><label for="class">Java Class</label><input type="text" placeholder="İsim" class="file-name"></div>
+        <div class="file-option"><input type="checkbox" id="c" value=".c"><label for="c">C</label><input type="text" placeholder="İsim" class="file-name"></div>
+        <div class="file-option"><input type="checkbox" id="h" value=".h"><label for="h">C Header</label><input type="text" placeholder="İsim" class="file-name"></div>
+        <div class="file-option"><input type="checkbox" id="cpp" value=".cpp"><label for="cpp">C++</label><input type="text" placeholder="İsim" class="file-name"></div>
+        <div class="file-option"><input type="checkbox" id="hpp" value=".hpp"><label for="hpp">C++ Header</label><input type="text" placeholder="İsim" class="file-name"></div>
+        <div class="file-option"><input type="checkbox" id="cs" value=".cs"><label for="cs">C#</label><input type="text" placeholder="İsim" class="file-name"></div>
+        <div class="file-option"><input type="checkbox" id="ruby" value=".rb"><label for="ruby">Ruby</label><input type="text" placeholder="İsim" class="file-name"></div>
+        <div class="file-option"><input type="checkbox" id="go" value=".go"><label for="go">Go</label><input type="text" placeholder="İsim" class="file-name"></div>
+        <div class="file-option"><input type="checkbox" id="rust" value=".rs"><label for="rust">Rust</label><input type="text" placeholder="İsim" class="file-name"></div>
+        <div class="file-option"><input type="checkbox" id="swift" value=".swift"><label for="swift">Swift</label><input type="text" placeholder="İsim" class="file-name"></div>
+        <div class="file-option"><input type="checkbox" id="kotlin" value=".kt"><label for="kotlin">Kotlin</label><input type="text" placeholder="İsim" class="file-name"></div>
+
+        <h2>Script Dilleri</h2>
+        <div class="file-option"><input type="checkbox" id="bash" value=".sh"><label for="bash">Bash</label><input type="text" placeholder="İsim" class="file-name"></div>
+        <div class="file-option"><input type="checkbox" id="ps1" value=".ps1"><label for="ps1">PowerShell</label><input type="text" placeholder="İsim" class="file-name"></div>
+        <div class="file-option"><input type="checkbox" id="perl" value=".pl"><label for="perl">Perl</label><input type="text" placeholder="İsim" class="file-name"></div>
+        <div class="file-option"><input type="checkbox" id="lua" value=".lua"><label for="lua">Lua</label><input type="text" placeholder="İsim" class="file-name"></div>
+
+        <h2>Veritabanı Dilleri</h2>
+        <div class="file-option"><input type="checkbox" id="sql" value=".sql"><label for="sql">SQL</label><input type="text" placeholder="İsim" class="file-name"></div>
+        <div class="file-option"><input type="checkbox" id="pls" value=".pls"><label for="pls">PL/SQL</label><input type="text" placeholder="İsim" class="file-name"></div>
+
+        <h2>Diğer Diller</h2>
+        <div class="file-option"><input type="checkbox" id="typescript" value=".ts"><label for="typescript">TypeScript</label><input type="text" placeholder="İsim" class="file-name"></div>
+        <div class="file-option"><input type="checkbox" id="markdown" value=".md"><label for="markdown">Markdown</label><input type="text" placeholder="İsim" class="file-name"></div>
+        <div class="file-option"><input type="checkbox" id="yaml" value=".yaml"><label for="yaml">YAML</label><input type="text" placeholder="İsim" class="file-name"></div>
+        <div class="file-option"><input type="checkbox" id="yml" value=".yml"><label for="yml">YAML</label><input type="text" placeholder="İsim" class="file-name"></div>
+        <div class="file-option"><input type="checkbox" id="dart" value=".dart"><label for="dart">Dart</label><input type="text" placeholder="İsim" class="file-name"></div>
+        <div class="file-option"><input type="checkbox" id="bashShell" value=".bash"><label for="bashShell">Shell</label><input type="text" placeholder="İsim" class="file-name"></div>
+
+        <h2>Oyun Geliştirme Dilleri</h2>
+        <div class="file-option"><input type="checkbox" id="unity" value=".cs"><label for="unity">C# (Unity için)</label><input type="text" placeholder="İsim" class="file-name"></div>
+        <div class="file-option"><input type="checkbox" id="gd" value=".gd"><label for="gd">GDScript (Godot için)</label><input type="text" placeholder="İsim" class="file-name"></div>
+        
+        <button type="button" id="download-button">İndir</button>
+    </form>
+
+    <!-- İndirme sonrası gösterilecek ekran -->
+    <div id="thank-you-screen" style="display: none;">
+        <div class="overlay">
+            <div class="message-box">
+                <span id="close-button" style="cursor: pointer;">✖</span>
+                <p>İndirme işlemi tamamlandı!</p>
+                <p>Uzantiindir.vercel.app tarafından yapılmıştır.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
