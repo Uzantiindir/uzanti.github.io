@@ -93,11 +93,16 @@ document.getElementById('download-button').addEventListener('click', function ()
         link.click();
 
         // İndirme işleminden sonra teşekkür ekranını göster
-        document.getElementById('thank-you-screen').style.display = 'block';
+        document.getElementById('thank-you-screen').style.display = 'flex'; // Popup ekranını göster
     });
 });
 
 // Çarpı butonuna tıklandığında ekranı kapatma
 document.getElementById('close-button').addEventListener('click', function() {
+    document.getElementById('thank-you-screen').style.display = 'none';
+});
+
+// Tamam butonuna tıklandığında ekranı kapatma
+document.getElementById('confirm-button').addEventListener('click', function() {
     document.getElementById('thank-you-screen').style.display = 'none';
 });
